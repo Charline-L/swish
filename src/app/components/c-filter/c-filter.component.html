@@ -1,0 +1,20 @@
+<li class="c-filter">
+
+  <button
+    class="a-button"
+    [ngClass]="{'a-button--full': isSelected, 'a-button--stroke': !isSelected}"
+    (click)="updateFilter()" >
+
+    <span
+      [ngClass]="{'c-filter__value c-filter__value--active': currentValueIndex === 0, 'c-filter__value':  currentValueIndex !== 0}"
+    >{{tagName}}</span>
+
+    <span *ngFor="let value of values; let i = index"
+          [ngClass]="{'c-filter__value c-filter__value--active': currentValueIndex === i + 1, 'c-filter__value':  currentValueIndex !== i + 1}">
+      <span>{{value}}</span>
+
+    </span>
+
+  </button>
+
+</li>

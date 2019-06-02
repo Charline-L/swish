@@ -1,0 +1,35 @@
+*
+  margin: 0
+  padding: 0
+
+*, *:before, *:after
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  color: inherit
+
+li
+  list-style: none
+
+
+html
+  font-size: #{(1/strip-unit(375)*100)}vw
+
+
+button
+  background-color: transparent
+  appearance: none
+  border-width: 0
+
+
+input
+
+  &:invalid
+    outline: none !important
+    box-shadow: none !important
+
+
+  &:required
+    box-shadow: none !important
+    outline: none !important

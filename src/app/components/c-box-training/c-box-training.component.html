@@ -1,0 +1,32 @@
+<li class="c-box-training {{className}}" *ngIf="
+  (!hasFilter) ||
+  (
+    hasFilter &&
+    ( (filter.duration && filter.duration === duration) || !filter.duration) &&
+    ( (filter.level && filter.level && filter.level === level) || !filter.level )
+  )">
+
+    <div class="c-box-training__container-image">
+
+      <img src="../../../assets/img/training.png" alt="" class="c-box-training__image">
+
+      <app-c-fav [isFav]="isFav"></app-c-fav>
+
+    </div>
+
+    <a class="c-box-training__container-texts" [routerLink]="'/single-training'">
+
+      <p class="c-box-training__title t-dark-blue t-title">Nom entrainement</p>
+
+      <p class="c-box-training__description t-dark-blue t-common">
+        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+      </p>
+
+      <div class="c-box-training__informations t-blue t-common">
+        <p class="c-box-training__level">niv. {{level}}</p>
+        <p class="c-box-training__timing">{{duration}} min.</p>
+      </div>
+
+    </a>
+
+</li>

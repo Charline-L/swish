@@ -1,0 +1,5 @@
+@function strip-unit($num)
+  @return $num / ($num * 0 + 1)
+
+@function rem-to-vw($rem)
+  @return $rem * 100vw / 414

@@ -1,0 +1,23 @@
+@import "../../../styles.sass"
+
+.c-box-spec
+  background-color: $orange
+  border-radius: rem-to-vw(20)
+  +shadow
+  padding: 0 rem-to-vw(50) rem-to-vw(15) rem-to-vw(25)
+  display: inline-block
+  margin-right: rem-to-vw(25)
+
+  &__icon-container
+    background-color: $blue
+    padding: rem-to-vw(15)
+    display: inline-block
+    border-radius: rem-to-vw(20)
+    transform: translateY(-50%)
+    margin-bottom: rem-to-vw(-10)
+
+  &__icon
+    +size(rem-to-vw(20))
+
+  &__title
+    margin-bottom: rem-to-vw(5)

@@ -1,0 +1,106 @@
+<!--START NAV-->
+<app-c-navigation></app-c-navigation>
+<!--END NAV-->
+
+<!--START CONTENU-->
+<section class="p-home">
+
+  <!--START LAST SESSION-->
+  <div class="p-home__session p-home-session p-home__block">
+
+    <!--START TITLE-->
+    <div class="p-home__top">
+      <h2 class="p-home-session__title t-dark-blue t-title">Dernière séance</h2>
+      <p class="p-home-session__date t-orange t-common">hier</p>
+    </div>
+    <!--END TITLE-->
+
+    <!--START LIST CONTAINER-->
+    <div class="p-home__list-scroll p-home-session__list-container">
+
+      <!--START LIST-->
+      <ul class="p-home-session__list">
+
+        <app-c-box-spec imageName="training" title="Marqués" number="112"></app-c-box-spec>
+        <app-c-box-spec imageName="timer" title="Minutes" number="35"></app-c-box-spec>
+        <app-c-box-spec imageName="training" title="Ratés" number="97"></app-c-box-spec>
+
+      </ul>
+      <!--END LIST-->
+
+    </div>
+    <!--END LIST CONTAINER-->
+
+  </div>
+  <!--END LAST SESSION-->
+
+  <!--START TRAINING-->
+  <div class="p-home__training p-home-training p-home__block ">
+
+    <!--START TITLE-->
+    <h2 class="p-home__top p-home-training__title t-dark-blue t-title">Entrainements suggérés</h2>
+    <!--END TITLE-->
+
+    <!--START LIST CONTAINER-->
+    <div class="p-home__list-scroll p-home-training__list-container">
+
+      <!--START LIST -->
+      <ul class="p-home-training__list">
+
+        <app-c-box-training></app-c-box-training>
+        <app-c-box-training></app-c-box-training>
+        <app-c-box-training></app-c-box-training>
+
+      </ul>
+      <!--END LIST -->
+
+    </div>
+    <!--END LIST CONTAINER-->
+
+    <!--START BUTTON -->
+    <a class="p-home-training__button a-button a-button--full" [routerLink]="'/training'">
+      Voir les entrainements
+    </a>
+    <!--END BUTTON -->
+
+  </div>
+  <!--END TRAINING-->
+
+  <!--START BADGES-->
+  <div class="p-home__badges p-home-badges p-home__block">
+
+    <!--START TITLE-->
+    <h2 class="p-home-badges__title p-home__top t-dark-blue t-title">Badges en cours</h2>
+    <!--END TITLE-->
+
+    <!--START LIST CONTAINER-->
+    <div class="p-home-badges__list-container">
+
+      <ul class="p-home-badges__list">
+
+        <app-c-box-badge [percent]="5" [objectif]="7"></app-c-box-badge>
+        <app-c-box-badge [percent]="30" [objectif]="30"></app-c-box-badge>
+        <app-c-box-badge [percent]="5" [objectif]="10"></app-c-box-badge>
+        <app-c-box-badge [percent]="10" [objectif]="40"></app-c-box-badge>
+
+      </ul>
+
+    </div>
+    <!--END LIST CONTAINER-->
+
+    <!--START BUTTON -->
+    <a class="p-home-badges__button a-button a-button--full" [routerLink]="'/badges'">
+      Voir les badges
+    </a>
+    <!--END BUTTON -->
+
+  </div>
+  <!--END BADGES-->
+
+  <!--START PUB-->
+  <div class="p-home__ad p-home-ad">
+    <img src="../../../assets/img/image-ad.png" alt="" class="p-home-ad__image">
+  </div>
+  <!--END PUB-->
+
+</section>

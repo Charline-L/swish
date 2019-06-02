@@ -1,0 +1,106 @@
+@import "../../../styles.sass"
+
+
+.p-profile
+  padding-bottom: rem-to-vw(50)
+
+  &__bottom
+    background-color: $white
+    border-top-left-radius: rem-to-vw(20)
+    border-top-right-radius: rem-to-vw(20)
+    transform: translateY(rem-to-vw(-20))
+
+.p-profile-top
+  +size(100%, rem-to-vw(200))
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    +size(100%)
+    object-fit: cover
+    object-position: center
+    filter: blur(10px)
+    opacity: 0.5
+
+  &__image
+    +size(75rem)
+    border-radius: 100%
+    z-index: 1
+
+  &__container-buttons
+    position: absolute
+    bottom: rem-to-vw(40)
+    right: rem-to-vw(25)
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+  &__button
+    +size(30rem)
+    background-color: $orange
+    border-radius: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: rem-to-vw(10)
+
+    img
+      +size(15rem)
+
+    &:last-child
+      margin-right: 0
+
+
+
+.p-profile-description
+  padding: rem-to-vw(25)
+
+  &__name
+    text-align: center
+    +size(100%, auto)
+
+.p-profile-badges
+  padding: rem-to-vw(25)
+  display: flex
+  flex-direction: column
+
+  &__title
+    margin-bottom: rem-to-vw(25)
+
+  &__list-container
+    margin-bottom: rem-to-vw(25)
+    padding-top: rem-to-vw(25)
+
+  &__list
+    display: flex
+    justify-content: space-between
+
+  &__button
+    align-self: center
+
+
+.p-profile-training
+  padding: rem-to-vw(25)
+  display: flex
+  flex-direction: column
+
+  &__title
+    margin-bottom: rem-to-vw(25)
+
+
+  &__list
+    margin-bottom: rem-to-vw(25)
+
+    .c-box-training
+      margin-bottom: rem-to-vw(25)
+
+      &:last-child
+        margin-bottom: 0
+
+  &__button
+    align-self: center

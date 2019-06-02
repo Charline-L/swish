@@ -1,0 +1,53 @@
+@import "../../../styles.sass"
+
+.p-training
+  padding: rem-to-vw(25)
+
+  &__block
+    margin-bottom: rem-to-vw(50)
+
+  &__list-filter
+    display: none
+    padding-bottom: rem-to-vw(50)
+
+
+.p-training-search
+  +size(100%, auto)
+  display: flex
+  justify-content: flex-start
+  align-items: center
+
+
+.p-training-filters
+  margin-top: rem-to-vw(50)
+
+  &__list-container
+    +size(100%, auto)
+    overflow: hidden
+
+  &__list
+    display: flex
+    overflow: scroll
+    padding: rem-to-vw(20) 0
+
+
+.p-training-block
+  &__title
+    margin-bottom: rem-to-vw(20)
+
+  &__list-container
+    +size(100vw, auto)
+    overflow: scroll
+    transform: translateX(rem-to-vw(-25))
+
+  &__list
+    +size(calc((rem-to-vw(275)) * 3), auto)
+    display: flex
+    padding: rem-to-vw(25)
+    overflow: scroll
+
+    &--small
+      flex-direction: column
+      width: 100%
+      padding: 0
+      overflow: initial

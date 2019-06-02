@@ -1,0 +1,67 @@
+<section class="p-introduction">
+
+  <!--START TOP-->
+  <div class="p-introduction__top">
+
+    <!--START ILLUSTRATION-->
+    <div class="p-introduction__image-container">
+      <img src="../../../assets/svg/player.svg" alt="Illustration joueur de basket" class="p-introduction__image">
+    </div>
+    <!--END ILLUSTRATION-->
+
+    <!--START NAV-->
+    <div class="p-introduction__nav-container">
+      <div *ngFor="let slide of slides;" class="p-introduction__dot"></div>
+    </div>
+    <!--END NAV-->
+
+  </div>
+  <!--END TOP-->
+
+
+  <!--START BOTTOM-->
+  <div class="p-introduction__bottom">
+
+    <!--START SLIDE-->
+    <div *ngFor="let slide of slides;" class="p-introduction__slide">
+
+      <!--START TITLE-->
+      <h2 class="p-introduction__title t-title t-dark-blue">
+        {{slide.title}}
+      </h2>
+      <!--END TITLE-->
+
+      <!--START TEXT-->
+      <p class="p-introduction__text t-common t-dark-blue">
+        {{slide.text}}
+      </p>
+      <!--END TEXT-->
+
+      <!--START BUTTON-->
+      <div *ngIf="slide.index !== 3; then templateSwipe else templateStart">
+      </div>
+      <!--END BUTTON-->
+
+      <!--START NEXT-->
+      <ng-template #templateSwipe>
+        <button type="button" class="p-introduction__button a-button a-button--full">
+          <span>{{slide.button}}</span>
+        </button>
+      </ng-template>
+      <!--END NEXT-->
+
+      <!--START LAST-->
+      <ng-template #templateStart>
+        <a class="p-introduction__button a-button a-button--full" [routerLink]="'/object'">
+          <span>{{slide.button}}</span>
+        </a>
+      </ng-template>
+      <!--END LAST-->
+
+    </div>
+    <!--END SLIDE-->
+
+  </div>
+  <!--END BOTTOM-->
+
+</section>

@@ -1,0 +1,133 @@
+<!--START NAV-->
+<app-c-navigation></app-c-navigation>
+<!--END NAV-->
+
+<section class="p-training">
+
+  <!--START SEARCH-->
+  <app-c-search name="training" placeholder="Rechercher un entraineemnt"></app-c-search>
+  <!--END SEARCH-->
+
+  <!--START FILTRES-->
+  <div class="p-training__filter p-training__block p-training-filters">
+
+    <p class="p-training-filters__intro t-common t-dark-blue">
+      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
+
+    <div class="p-training-filters__list-container">
+
+      <ul class="p-training-filters__list">
+
+        <app-c-filter [isSelected]="false" (update)="isUpdatingFilter($event)" filterName="level" tagName="Niveau" [values]="[1, 2, 3]"></app-c-filter>
+        <app-c-filter [isSelected]="false" (update)="isUpdatingFilter($event)" filterName="duration" tagName="Durée" [values]="[10, 20, 30]"></app-c-filter>
+        <app-c-filter [isSelected]="false" (update)="isUpdatingFilter($event)" filterName="fav" tagName="Populaire" [values]="['-45', '+45']"></app-c-filter>
+        <app-c-filter [isSelected]="false" (update)="isUpdatingFilter($event)" filterName="date" tagName="Date d'ajout" [values]="['- 1j', '- 7j', '- 30j', '+ 30j']"></app-c-filter>
+
+      </ul>
+
+    </div>
+
+  </div>
+  <!--END FILTRES-->
+
+  <!--START SELECTION-->
+  <div class="p-training__block js-block-training p-training-block">
+
+    <!--START TITLE-->
+    <h2 class="p-training-block__title t-dark-blue t-title">Sélectionnés pour vous</h2>
+    <!--END TITLE-->
+
+    <!--START LIST CONTAINER-->
+    <div class="p-home__list-scroll p-training-block__list-container">
+
+      <!--START LIST -->
+      <ul class="p-training-block__list">
+
+        <app-c-box-training [level]="4" [duration]="10"></app-c-box-training>
+        <app-c-box-training [level]="4" [duration]="20"></app-c-box-training>
+        <app-c-box-training [level]="3" [duration]="30"></app-c-box-training>
+
+      </ul>
+      <!--END LIST -->
+
+    </div>
+    <!--END LIST CONTAINER-->
+
+  </div>
+  <!--END SELECTION-->
+
+
+  <!--START LAST ADDED-->
+  <div class="p-training__block js-block-training p-training-block">
+
+    <!--START TITLE-->
+    <h2 class="p-training-block__title t-dark-blue t-title">Derniers ajoutés</h2>
+    <!--END TITLE-->
+
+    <!--START LIST CONTAINER-->
+    <div class="p-home__list-scroll p-training-block__list-container">
+
+      <!--START LIST -->
+      <ul class="p-training-block__list">
+
+        <app-c-box-training [level]="1" [duration]="10"></app-c-box-training>
+        <app-c-box-training [level]="3" [duration]="20"></app-c-box-training>
+        <app-c-box-training [level]="2" [duration]="30"></app-c-box-training>
+
+      </ul>
+      <!--END LIST -->
+
+    </div>
+    <!--END LIST CONTAINER-->
+
+  </div>
+  <!--END LAST ADDED-->
+
+
+  <!--START FAV-->
+  <div class="p-training__block js-block-training p-training-block">
+
+    <!--START TITLE-->
+    <h2 class="p-training-block__title t-dark-blue t-title">Les plus aimés</h2>
+    <!--END TITLE-->
+
+    <!--START LIST CONTAINER-->
+    <div class="p-home__list-scroll p-training-block__list-container">
+
+      <!--START LIST -->
+      <ul class="p-training-block__list">
+
+        <app-c-box-training [level]="2" [duration]="20"></app-c-box-training>
+        <app-c-box-training [level]="4" [duration]="45"></app-c-box-training>
+        <app-c-box-training [level]="1" [duration]="10"></app-c-box-training>
+
+      </ul>
+      <!--END LIST -->
+
+    </div>
+    <!--END LIST CONTAINER-->
+
+  </div>
+  <!--END FAV-->
+
+
+  <!--START LIST FILTER-->
+  <div class="p-training__list-filter">
+
+    <ul class="p-training-block__list p-training-block__list--small">
+
+      <app-c-box-training className="c-box-training--small" [level]="1" [duration]="10" [hasFilter]="true" [filter]="{duration: filter.duration, level:filter.level}"></app-c-box-training>
+      <app-c-box-training className="c-box-training--small" [level]="1" [duration]="20" [hasFilter]="true" [filter]="{duration: filter.duration, level:filter.level}"></app-c-box-training>
+
+      <app-c-box-training className="c-box-training--small" [level]="2" [duration]="10" [hasFilter]="true" [filter]="{duration: filter.duration, level:filter.level}"></app-c-box-training>
+      <app-c-box-training className="c-box-training--small" [level]="2" [duration]="20" [hasFilter]="true" [filter]="{duration: filter.duration, level:filter.level}"></app-c-box-training>
+
+      <app-c-box-training className="c-box-training--small" [level]="3" [duration]="10" [hasFilter]="true" [filter]="{duration: filter.duration, level:filter.level}"></app-c-box-training>
+      <app-c-box-training className="c-box-training--small" [level]="3" [duration]="20" [hasFilter]="true" [filter]="{duration: filter.duration, level:filter.level}"></app-c-box-training>
+
+    </ul>
+  </div>
+  <!--END LIST FILTER-->
+
+</section>

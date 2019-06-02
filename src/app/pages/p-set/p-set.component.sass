@@ -1,0 +1,39 @@
+@import "../../../styles.sass"
+
+.p-set
+  +size(100%, 100vh)
+  overflow: hidden
+  position: relative
+
+  &__bg
+    +size(auto, 100%)
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+
+  &__bottom
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: rem-to-vw(25)
+
+    +size(100%, auto)
+
+    display: flex
+    flex-direction: column
+
+  &__button
+    margin-bottom: rem-to-vw(25)
+    align-self: flex-end
+
+  &__progress-container
+    +size(100%, rem-to-vw(10))
+    border-radius: rem-to-vw(5)
+    background-color: $white
+    padding: rem-to-vw(2)
+
+  &__progress
+    background-color: $blue
+    +size(0%, 100%)
+    border-radius: rem-to-vw(5)

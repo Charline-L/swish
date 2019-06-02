@@ -1,0 +1,89 @@
+@import "../../../styles.sass"
+
+.c-popin
+  position: fixed
+  top: 0
+  left: 0
+  +size(100vw, 100vh)
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: rem-to-vw(25)
+
+  &__overlay
+    position: absolute
+    top: 0
+    left: 0
+    +size(100%)
+    background-color: rgba($white, 0.7)
+
+  &__content
+    z-index: 1
+    background-color: $white
+    border-radius: rem-to-vw(20)
+    padding: rem-to-vw(25)
+    display: flex
+    flex-direction: column
+    +shadow
+
+
+  &__close
+    align-self: center
+
+
+.p-badges-popin
+  flex-direction: column
+  padding-bottom: rem-to-vw(25)
+
+  &__top
+    background-color: $blue
+    border-radius: rem-to-vw(20)
+    +size(rem-to-vw(200), auto)
+    padding: rem-to-vw(25)
+    align-self: center
+    display: flex
+    flex-direction: column
+    margin-top: -35%
+    margin-bottom: rem-to-vw(50)
+
+  &__icon-container
+    position: relative
+    display: flex
+    +size(rem-to-vw(100))
+    align-self: center
+    margin-bottom: rem-to-vw(25)
+
+  &__icon
+    +size(rem-to-vw(50))
+    margin-bottom: rem-to-vw(25)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  &__progress-container
+    +size(100%)
+    overflow: visible
+
+    path
+      stroke: $white
+      fill: transparent
+
+  &__progress
+    stroke-dasharray: 1840
+    stroke-dashoffset: 920
+    stroke: $white
+    transform: rotate(-90deg)
+    transform-origin: center
+
+  &__container-text
+    margin-bottom: rem-to-vw(25)
+
+  &__title
+    margin-bottom: rem-to-vw(25)
+
+  &__button
+    align-self: center
+
+  &__number
+    text-align: center

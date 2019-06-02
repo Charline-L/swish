@@ -1,0 +1,48 @@
+<section class="p-login">
+
+  <div class="p-login__top">
+
+    <img src="../../../assets/img/logo.png" alt="" class="p-login__logo" />
+
+    <h1 class="p-login__intro t-white t-common">
+      Vous n’avez encore pas de compte ? <br>
+      Créez-en un <a class="a-link" [routerLink]="'/register'">ici</a>.
+    </h1>
+
+  </div>
+
+
+  <form class="p-login__form c-form t-dark-blue">
+
+    <div class="c-form__row">
+
+      <label class="c-form__label t-label" for="email">
+        <img class="c-form__icon" src="../../../assets/svg/at.svg" alt="Renseignez votre email" />
+      </label>
+
+      <input class="c-form__input t-common" type="email" name="email" id="email" placeholder="example@mail.com">
+
+    </div>
+
+    <div class="c-form__row">
+
+      <label class="c-form__label t-label" for="password">
+        <img class="c-form__icon" src="../../../assets/svg/password.svg" alt="Renseignez votre mot de passe" />
+      </label>
+
+      <input class="c-form__input t-common" type="password" name="password" id="password" placeholder="••••">
+
+    </div>
+
+    <a [routerLink]="'/passwordForgotten'" class="p-login__passwork a-link">Mot de passe oublié ?</a>
+
+    <div class="c-form__container-buttons">
+      <a [routerLink]="'/introduction'" class="c-form__button a-button a-button--full t-white" type="submit">Connexion</a>
+    </div>
+
+
+  </form>
+
+</section>
+
+

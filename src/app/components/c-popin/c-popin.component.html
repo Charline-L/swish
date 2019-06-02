@@ -1,0 +1,49 @@
+<div class="c-popin p-badges-popin" *ngIf="isOpen">
+
+  <div class="c-popin__overlay"></div>
+
+  <div class="c-popin__content">
+
+    <div class="p-badges-popin__top">
+
+      <div class="p-badges-popin__icon-container">
+
+        <img src="../../../assets/svg/badge.svg" alt="" class="p-badges-popin__icon">
+
+        <svg class="p-badges-popin__progress-container"
+             version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             x="0px" y="0px"
+             viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+
+          <path stroke-width="2" d="M300,150c0,82.8-67.2,150-150,150S0,232.8,0,150S67.2,0,150,0S300,67.2,300,150z"></path>
+          <path stroke-width="4"
+                class="p-badges-popin__progress"
+                [ngStyle]="{'stroke-dasharray': strokeValue}"
+                d="M296,150c0,80.6-65.4,146-146,146S4,230.6,4,150S69.4,4,150,4S296,69.4,296,150z"></path>
+
+          </svg>
+
+      </div>
+
+      <p class="t-white t-big p-badges-popin__number" *ngIf="!isFull">
+        {{percent}} / {{objectif}}
+      </p>
+
+    </div>
+
+    <div class="p-badges-popin__container-text t-dark-blue">
+      <p class="p-badges-popin__title t-title">Bravo ! <br>
+        {{ isFull ? 'Tout validé !' : 'Déjà ' + percentRealised + '% de validé !' }}
+        </p>
+      <p class="t-common">
+        {{ isFull ? 'Allé maintenant il faut tenter les autres !' : description }}
+      </p>
+    </div>
+
+    <button class="c-popin__close a-button a-button--full" (click)="closePopin()">
+      OK
+    </button>
+
+  </div>
+
+</div>

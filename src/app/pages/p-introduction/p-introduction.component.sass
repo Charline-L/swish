@@ -1,0 +1,78 @@
+@import "../../../styles.sass"
+
+$paddingIntro: rem-to-vw(50)
+
+.p-introduction
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+  +size(100vw, 100vh)
+
+  position: relative
+  overflow: hidden
+  background-color: $blue
+
+  &__top
+    position: relative
+    +size(100%, auto)
+    flex-grow: 1
+
+  &__image-container
+    position: absolute
+    top: 0
+    left: 0
+    transform: translateY(rem-to-vw(20))
+    //overflow: hidden
+    +size(100%)
+
+  &__image
+    +size(100%)
+    object-fit: cover
+    object-position: center
+
+  &__nav-container
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    bottom: 0
+    left: 50%
+    +size(100vw, rem-to-vw(40))
+    transform: translateX(-50%)
+
+  &__dot
+    +size(10rem)
+    border-radius: 100%
+    border: solid rem-to-vw(1) $white
+    +margin(10rem)
+    +transition-speed1
+
+    &--active
+      background-color: $white
+
+  &__bottom
+    background-color: $white
+    border-top-left-radius: rem-to-vw(20)
+    border-top-right-radius: rem-to-vw(20)
+    position: relative
+
+  &__slide
+    position: absolute
+    top: 0
+    left: 0
+
+    padding: rem-to-vw(50)
+    display: flex
+    flex-direction: column
+    box-sizing: content-box
+
+
+  &__title
+    margin-bottom: rem-to-vw(20)
+
+  &__text
+    margin-bottom: rem-to-vw(50)
+
+  &__button
+    align-self: flex-end

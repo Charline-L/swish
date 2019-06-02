@@ -1,0 +1,38 @@
+.c-form
+
+  &__row
+    display: flex
+    flex-direction: row
+    margin-bottom: rem-to-vw(30)
+    border-bottom: solid rem-to-vw(1) $orange
+    align-items: center
+    justify-content: flex-start
+    +size(100%, auto)
+
+    &--blue
+      border-color: $blue
+
+  &__label
+    margin-left: rem-to-vw(10)
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+  &__icon
+    +size(rem-to-vw(20))
+
+  &__input
+    border: none
+    background-color: transparent
+    padding: rem-to-vw(5) rem-to-vw(20)
+    display: block
+    +size(100%, auto)
+
+  &__container-buttons
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: rem-to-vw(50)
+
+  &__button
+    align-self: flex-end

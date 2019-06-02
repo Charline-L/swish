@@ -1,0 +1,56 @@
+<section class="p-object">
+
+  <!--START TOP-->
+  <div class="p-object__top">
+
+    <img src="../../../assets/svg/sky.svg" alt="Ilustration" class="p-object__image">
+
+    <h1 class="p-object__explanations t-white t-common">
+      Retrouver le nom de votre objet sur son emballage, une fois que celui-ci est apparu dans la liste cliquer dessus pour l’associer avec votre téléphone.
+    </h1>
+
+  </div>
+  <!--END TOP-->
+
+  <!--START BOTTOM-->
+  <div class="p-object__bottom">
+
+    <!--START TITLE-->
+    <div class="p-object__title-container">
+
+      <img src="../../../assets/svg/connect.svg" alt="Connection objet" class="p-object__icone">
+      <p class="p-object__title t-dark-blue t-title">Appareils détectés</p>
+
+    </div>
+    <!--END TITLE-->
+
+    <!--START LISTE-->
+    <ul class="p-object__list t-dark-blue t-common">
+
+      <li class="p-object__item">
+        <p class="p-object__name">Swish AZ-348-K</p>
+        <a [routerLink]="'/set-introduction'">
+          <img class="p-object__add" src="../../../assets/svg/add.svg" alt="">
+        </a>
+      </li>
+
+      <li class="p-object__item">
+        <p class="p-object__name">Swish AB-798-B</p>
+        <a [routerLink]="'/set-introduction'">
+          <img class="p-object__add" src="../../../assets/svg/add.svg" alt="">
+        </a>
+      </li>
+
+    </ul>
+    <!--END LISTE-->
+
+    <!--START BUTTON-->
+    <a class="p-object__button a-button a-button--stroke t-orange" [routerLink]="'/home'">
+      Passer
+    </a>
+    <!--END BUTTON-->
+
+  </div>
+  <!--END BOTTOM-->
+
+</section>

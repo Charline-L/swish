@@ -1,0 +1,43 @@
+<!--START NAVIGATION-->
+<nav class="c-navigation">
+
+  <a class="c-navigation__button a-button a-button--full" [routerLink]="'/record-training'" [queryParams]="{free: true}" *ngIf="isLongPressDone">
+    Commencer entraînement
+  </a>
+
+  <ul class="c-navigation__list">
+
+    <li class="c-navigation__item" [routerLinkActive]="['c-navigation__item--active']">
+      <a class="c-navigation__icon" [routerLink]="'/home'">
+        <img src="../../../assets/svg/home.svg" alt="">
+      </a>
+    </li>
+
+    <li class="c-navigation__item" [routerLinkActive]="['c-navigation__item--active']">
+      <a class="c-navigation__icon" [routerLink]="'/badges'">
+        <img src="../../../assets/svg/badge.svg" alt="">
+      </a>
+    </li>
+
+    <li class="c-navigation__item js-touch-nav" [routerLinkActive]="['c-navigation__item--active']">
+      <a class="c-navigation__icon" [routerLink]="'/trainings'">
+        <img src="../../../assets/svg/training.svg" alt="">
+      </a>
+    </li>
+
+    <li class="c-navigation__item" [routerLinkActive]="['c-navigation__item--active']">
+      <a class="c-navigation__icon" [routerLink]="'/data'">
+        <img src="../../../assets/svg/data.svg" alt="">
+      </a>
+    </li>
+
+    <li class="c-navigation__item" [routerLinkActive]="['c-navigation__item--active']">
+      <a class="c-navigation__icon" [routerLink]="'/profile'">
+        <img src="../../../assets/svg/profil.svg"  alt="">
+      </a>
+    </li>
+
+  </ul>
+
+</nav>
+<!--END NAVIGATION-->

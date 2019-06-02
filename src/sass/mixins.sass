@@ -1,0 +1,41 @@
+=size($width, $height: $width)
+  width: $width
+  height: $height
+
+=cover
+  +size(100%)
+  object-fit: cover
+  object-position: center
+
+=shadow
+  box-shadow: rem-to-vw(5) rem-to-vw(5) rem-to-vw(20) 0 rgba(153,147,153,0.40)
+
+=transition-speed1
+  transition: all 0.25s ease-in-out
+
+=margin($margin)
+  margin-left: calc(#{$margin}/2)
+  margin-right: calc(#{$margin}/2)
+
+  &:last-child
+    margin-right: 0
+
+  &:first-child
+    margin-left: 0
+
+
+=bg-gradient-animate
+  background: $gradient-blue
+  background-size: 400% 400%
+  animation: bg-gradient-animate 5s infinite
+
+@keyframes bg-gradient-animate
+  0%
+    background-position: 0 50%
+  50%
+    background-position: 100% 50%
+  100%
+    background-position: 0 50%
+
+
+

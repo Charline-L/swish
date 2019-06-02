@@ -1,0 +1,47 @@
+@import "../../../styles.sass"
+
+.c-box-badge
+
+  &__icon-container
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: rem-to-vw(5)
+
+  &__icon
+    +size(rem-to-vw(25))
+    object-position: center
+    object-fit: contain
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  &__progress-container
+    +size(rem-to-vw(50))
+    overflow: visible
+
+    path
+      fill: none
+      &:first-child
+        stroke: rgba($blue, 0.5)
+
+  &__progress
+    stroke-dasharray: 1840
+    stroke-dashoffset: 920
+    stroke: $blue
+    transform: rotate(-90deg)
+    transform-origin: center
+
+  &__text
+    text-align: center
+
+  &--full
+
+    .c-box-badge__progress
+      fill: $blue
+
+  &--lock
+    opacity: 0.5
+    pointer-events: none

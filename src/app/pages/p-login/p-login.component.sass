@@ -1,0 +1,36 @@
+@import "../../../styles.sass"
+
+.p-login
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: flex-start
+  +size(100vw, auto)
+  min-height: 100vh
+  background-color: $blue
+
+  &__top
+    +size(100%, auto)
+    padding: rem-to-vw(20)
+
+  &__logo
+    +size(rem-to-vw(200), auto)
+    object-fit: contain
+    object-position: center
+    z-index: 1
+    margin-bottom: rem-to-vw(40)
+    display: block
+
+  &__intro
+    display: block
+
+  &__form
+    padding: rem-to-vw(25)
+    +size(100%, auto)
+    border-top-left-radius: rem-to-vw(30)
+    border-top-right-radius: rem-to-vw(30)
+    background-color: $white
+
+  &__password
+    margin-top: rem-to-vw(5)
+    padding-left: rem-to-vw(50)
